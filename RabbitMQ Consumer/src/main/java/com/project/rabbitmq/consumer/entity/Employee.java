@@ -1,4 +1,4 @@
-package com.project.rabbitmq.producer.entity;
+package com.project.rabbitmq.consumer.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
