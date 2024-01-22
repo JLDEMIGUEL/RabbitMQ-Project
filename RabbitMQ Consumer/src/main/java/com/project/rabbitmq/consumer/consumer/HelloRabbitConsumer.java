@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloRabbitConsumer {
 
-     @RabbitListener(queues = "course.hello")
+    @RabbitListener(queues = "course.hello")
     public void listen(String message) {
-         System.out.println("Consuming: " + message);
+        System.out.println("Consuming: " + message);
     }
 }

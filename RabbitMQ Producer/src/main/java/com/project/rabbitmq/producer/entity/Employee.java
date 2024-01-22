@@ -23,20 +23,20 @@ public class Employee {
         return this.id;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public LocalDate getBirthDate() {
-        return this.birthDate;
-    }
-
     public void setId(String id) {
         this.id = id;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDate getBirthDate() {
+        return this.birthDate;
     }
 
     @JsonFormat(pattern = "yyyy-MM-dd")
