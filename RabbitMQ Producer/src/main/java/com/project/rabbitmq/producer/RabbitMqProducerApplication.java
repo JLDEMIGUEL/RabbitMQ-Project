@@ -1,9 +1,6 @@
 package com.project.rabbitmq.producer;
 
-import com.project.rabbitmq.producer.entity.Employee;
 import com.project.rabbitmq.producer.entity.Picture;
-import com.project.rabbitmq.producer.producer.HelloRabbitProducer;
-import com.project.rabbitmq.producer.producer.HumanResourceProducer;
 import com.project.rabbitmq.producer.producer.PictureProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -11,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -19,12 +15,10 @@ import java.util.concurrent.ThreadLocalRandom;
 @SpringBootApplication
 public class RabbitMqProducerApplication implements CommandLineRunner {
 
+    private final List<String> SOURCES = List.of("mobile", "web");
+    private final List<String> TYPES = List.of("jpg", "png", "svg");
     @Autowired
     private PictureProducer pictureProducer;
-
-    private final List<String> SOURCES = List.of("mobile","web");
-
-    private final List<String> TYPES = List.of("jpg", "png", "svg");
 
     public static void main(String[] args) {
         SpringApplication.run(RabbitMqProducerApplication.class, args);

@@ -2,7 +2,6 @@ package com.project.rabbitmq.producer.producer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.rabbitmq.producer.entity.Employee;
 import com.project.rabbitmq.producer.entity.Picture;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
