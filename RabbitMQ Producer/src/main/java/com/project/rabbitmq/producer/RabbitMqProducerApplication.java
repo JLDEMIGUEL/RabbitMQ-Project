@@ -2,6 +2,7 @@ package com.project.rabbitmq.producer;
 
 import com.project.rabbitmq.producer.entity.Picture;
 import com.project.rabbitmq.producer.producer.PictureProducer;
+import com.project.rabbitmq.producer.producer.PictureProducerTwo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +19,7 @@ public class RabbitMqProducerApplication implements CommandLineRunner {
     private final List<String> SOURCES = List.of("mobile", "web");
     private final List<String> TYPES = List.of("jpg", "png", "svg");
     @Autowired
-    private PictureProducer pictureProducer;
+    private PictureProducerTwo pictureProducer;
 
     public static void main(String[] args) {
         SpringApplication.run(RabbitMqProducerApplication.class, args);
